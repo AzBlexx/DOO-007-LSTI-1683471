@@ -1,0 +1,57 @@
+
+<html>
+	<head><title>Practica 1 Laboratorio</title></head>
+	<body>
+		<h1>Practica 1</h1>
+		<form>
+			<label>Nombre</label>
+			<input id="name" type="text" style="text-transform: uppercase;"><br><br>
+			<label>Apellido Paterno</label>
+			<input id="ap1" type="text" style="text-transform: uppercase;"><br><br>
+			<label>Apellido Materno</label>
+			<input id="ap2" type="text" style="text-transform: uppercase;"><br><br>
+			<label>Fecha de nacimiento (DD/MM/AAAA)</label>
+			<input id="fecha" type="text" style="text-transform: uppercase;"><br><br>
+			<label>Edad</label>
+			<input id="edad" type="text"><br><br>
+			<label>Genero</label>
+			<select id="op">
+				<option  value="Macho">Macho</option>
+				<option  value="Op">Opresor</option>
+				<option  value="Mujer">Mujer</option>
+			</select>
+			<br><br>
+			<input type="button" value="Imprimir" onclick="imprimir()" >	
+		</form>
+		<label id="texto"></label>
+		
+		
+		
+	</body>
+	<script>
+				
+			function CrearRFC(){
+				var nombre=document.getElementById("name").value;
+				nombre=nombre.toUpperCase();
+				var appate=document.getElementById("ap1").value;
+				appate=appate.toUpperCase();
+				var appmate=document.getElementById("ap2").value;
+				appmate=appmate.toUpperCase();
+				var fecha=document.getElementById("fecha").value;
+				var genero=document.getElementById("op").value;
+				var RFC = appate.substring(0, 2) + appmate.substring(0, 1) + nombre.substring(0, 1) + fecha.substring(6,8) + fecha.substring(3,5) + fecha.substring(0,2) + genero.substring(0, 1);
+				return RFC;
+			}
+			
+			function imprimir(){
+				var rfc=CrearRFC();
+				var label=document.getElementById("texto");
+				label.innerHTML=rfc;
+
+			}
+	</script>
+			
+</html>
+			
+
+

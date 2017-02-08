@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel=stylesheet  href="static/bookstore.css" type="text/css" />
+        <title>Crear Libro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <form action="CrearLibro">
+            <article>
+                <header>
+                    <h1>Agregar un nuevo libro</h1>
+                    <h2>Informacion general</h2>
+                </header>
+            </article>
+                <p><label>Nombre:  </label>
+                    <input id="nombre" name="nombre" type="text"/></p>
+                <p><label>Precio:  </label>
+                    <input id="precio" name="precio" type="text"/></p>
+                <p><label>ISBN:  </label>
+                    <input id="isbn" name="isbn" type="text"/></p>
+                <p><label>Fecha de publicacion:  </label>
+                    <input id="fdp" name="fdp" type="text"/></p>
+                <article>
+                    <header>
+                        <h2>Informacion de genero</h2>
+                    </header>
+                </article>
+                <p><select id="genero" name="gen">
+                    <option>Seleccione</option>
+                    <option value="SUSPENSO">Suspenso</option>
+                    <option value="DRAMA">Drama</option>
+                    <option value="INFANTIL">Infantil</option>
+                    <option value="ROMANCE">Romance</option>
+                    <option value="OTRO">Otro</option>
+                    </select></p>
+                    <article>
+                        <header>
+                            <h2>Informacion de Publicacion</h2>
+                        </header>
+                    </article>
+                    <p><label>Editorial:    </label>
+                        <input type="text" name="editorial" id="editorial"/></p>
+                    <p><label>Autor</label>
+                        <input type="text" name="autor" id="autor"/></p>
+                <input type="submit" class="btn"/>
+        </form>
+    </body>
+</html>

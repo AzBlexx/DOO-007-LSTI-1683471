@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Practica 3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Registro</h1><hr>
+        <form action="Registro" method="POST" name="hola">
+            <br>
+            Usuario: <input type="text" name="usuario" id="usuario"/><br>
+            Contraseña: <input type="password" name="pass" id="pass"/><br>
+            Email: <input type="text" name="mail" id="mail"/><br>
+            Mes de Nacimiento: <select name="mes" id="mes">
+                <option>Selecciona</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select><br>
+            Sexo:<br>
+            <input type="radio" name="vato" value="M">Masculino<br>
+            <input type="radio" name="vato" value="F">Femenino<br>
+            Soy mayor de edad <input type="checkbox" name="casilla" id="casilla"/><br>
+            Acerca de mi: <br>
+            <textarea rows="5" cols="20" name="acerca">
+            </textarea><br>
+            
+            <input type="button" value="BORRAR" onClick="borrar()">
+            <input type="submit" name="boton" id="boton" value="ENVIAR">
+            <script>
+                function borrar(){
+                    document.forms["hola"].reset();
+                }
+            </script>
+        </form>
+    </body>
+</html>
